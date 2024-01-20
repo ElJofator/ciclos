@@ -6,15 +6,18 @@
 # Recuerde que el factorial n! es el producto de los números de 1 a n.
 import math
 
-n = int(input("n: "))
-suma = 1
-anterior = 10000
-resta = 1
-i = 1
-while(resta > 0.0001):
-    actual = 1/math.factorial(i)
-    suma += actual
-    resta = anterior - actual
-    anterior = actual
-    i += 1
-print(suma)
+try:
+    n = int(input("n: "))
+    suma = 1
+    anterior = 10000
+    resta = 1
+    i = 1
+    while(resta > 0.0001):
+        actual = 1/math.factorial(i)
+        suma += actual
+        resta = anterior - actual
+        anterior = actual
+        i += 1
+    print(suma)
+except ValueError:
+    print("No es un número válido")

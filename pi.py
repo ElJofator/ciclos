@@ -4,10 +4,13 @@
 # La entrada del programa debe ser un número entero n
 #  que indique cuántos términos de la suma se utilizará.
 
-n = int(input("n: "))
-suma = 0
-signo = 1
-for i in range(1, 2*n + 1, 2):
-    suma += signo/i
-    signo *= -1
-print(4*suma)
+try:
+    n = int(input("n: "))
+    suma = 0
+    signo = 1
+    for i in range(1, 2*n + 1, 2):
+        suma += signo/i
+        signo *= -1
+    print(4*suma)
+except ValueError:
+    print("No es un número válido")

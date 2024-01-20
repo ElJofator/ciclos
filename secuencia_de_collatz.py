@@ -21,7 +21,6 @@ def secuencia_de_collatz():
         secuencia += f"{n} "
     print(secuencia)
 
-#secuencia_de_collatz()
 
 # Desarrolle un programa que grafique los largos de las secuencias de Collatz de los números enteros positivos menores que el ingresado por el usuario:
     
@@ -37,4 +36,15 @@ def secuencia_de_collatz_2():
             secuencia += "*"
         print(secuencia)
 
-secuencia_de_collatz_2()
+escogido = False
+while(not escogido):
+    print("Escoge una opción:")
+    op = input("\t1. Secuencia de Collatz\n\t2. Secuencia de Collatz acumulada\n\t")
+    if(op == "1"):
+        secuencia_de_collatz()
+        escogido = True
+    elif(op == "2"):
+        secuencia_de_collatz_2()
+        escogido = True
+    else:
+        print("No es una opción válida")

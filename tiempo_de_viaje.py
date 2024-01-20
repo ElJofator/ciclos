@@ -3,14 +3,17 @@
 # El programa deja de pedir tiempos de viaje cuando se ingresa un 0.
 pedir = True
 minutos = 0
-while(pedir):
-    tramo = int(input("Duración tramo: "))
-    if(tramo == 0):
-        pedir = False
-    else:
-        minutos += tramo
-horas = 0
-while(minutos >= 60):
-    minutos -= 60
-    horas += 1
-print(f"Tiempo total de viaje: {horas}:{minutos} horas")
+try:
+    while(pedir):
+        tramo = int(input("Duración tramo: "))
+        if(tramo == 0):
+            pedir = False
+        else:
+            minutos += tramo
+    horas = 0
+    while(minutos >= 60):
+        minutos -= 60
+        horas += 1
+    print(f"Tiempo total de viaje: {horas}:{minutos} horas")
+except ValueError:
+    print("No es un número válido")
