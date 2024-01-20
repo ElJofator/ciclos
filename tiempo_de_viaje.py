@@ -14,6 +14,9 @@ try:
     while(minutos >= 60):
         minutos -= 60
         horas += 1
-    print(f"Tiempo total de viaje: {horas}:{minutos} horas")
+    if(minutos < 10):
+        print(f"Tiempo total de viaje: {horas}:0{minutos} horas")
+    else:
+        print(f"Tiempo total de viaje: {horas}:{minutos} horas")
 except ValueError:
     print("No es un número válido")
